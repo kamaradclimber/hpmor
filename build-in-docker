@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/mnt/hpmor/make_pdfs.sh
