@@ -1,22 +1,4 @@
 \input{hp-title}
-\ifcover%
-\definecolor{backgroundcover}{HTML}{272c36}
-\newpagecolor{backgroundcover}\afterpage{\restorepagecolor}
-\newcommand\BackgroundPic{
-\put(0,0){%
-\parbox[b][\paperheight]{\paperwidth}{%
-\vfill%
-\centering%
-\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{cover1.pdf}%
-\vfill%
-}}}\AddToShipoutPicture*{\BackgroundPic}%
-\AddToShipoutPicture*{\put(0,0){%
-\parbox[b][\paperheight]{\paperwidth}{%
-\hptitle{\fullvolumetitle{\volumenumber}}%
-}}}%
-\ %
-\cleartorecto
-\fi
 \begin{center}
 \thispagestyle{empty}
 {\hpfont
