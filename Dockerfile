@@ -1,4 +1,4 @@
-FROM kjarosh/latex:2024.2
+FROM docker.io/kjarosh/latex:2024.2
 WORKDIR /mnt/hpmor
 
 COPY build-in-docker /bin/run
