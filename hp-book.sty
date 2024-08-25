@@ -2,13 +2,13 @@
 \ProvidesPackage{hp-book}
 
 % Options
-\gdef\hplrmargins{1.5}
-\DeclareOption{pdf}{\gdef\hplrmargins{1}}
+% \gdef\hplrmargins{1.5}
+% \DeclareOption{pdf}{\gdef\hplrmargins{1}}
 \newif\ifcover\covertrue
 \DeclareOption{nocover}{\coverfalse}
 \ProcessOptions % process now as some are used immediately
 
-\documentclass[12pt,extrafontsizes,twoside,openright,final,msmallroyalvopaper, french]{memoir}
+\documentclass[8pt, extrafontsizes,twoside,openright,final,foolscapvopaper, french]{memoir}
 
 \input{hp-header}
 
@@ -21,23 +21,20 @@
 
 %
 % Set up page
-% FIXME: Improve the layout: margins not perhaps as wide as the default, but
-% wider than currently. (The type block is currently the same as for the previous, larger paper.)
-%
-\settypeblocksize{\topskip + 34\baselineskip}{352pt}{*}
-\setlrmargins{*}{*}{\hplrmargins}
-\setulmargins{*}{*}{1}
-\setheadfoot{\topskip +  \baselineskip}{2\baselineskip}
-\checkandfixthelayout[fixed]
 
+\setlrmarginsandblock{15mm}{*}{*}
+\setulmarginsandblock{25mm}{25mm}{*}
+%\setheadfoot{2mm}{5mm}
+\setheaderspaces{*}{5mm}{*}
+\checkandfixthelayout[fixed]
 
 %
 % Page header
 %
 \usepackage{graphicx} % for \reflectbox
 \makeevenhead{headings}{\Stars}{
-	\hpfont\hyperref[contents]{\textls[50]{\rightmark}}}{\reflectbox{\Stars}}
-\makeoddhead{headings}{\Stars}{\parbox{97mm}{\centering\hpfont\textls[50]{\leftmark}}}{\reflectbox{\Stars}}
+ 	\hpfont\hyperref[contents]{\textls[30]{\rightmark}}}{\reflectbox{\Stars}}
+\makeoddhead{headings}{\Stars}{\parbox{68mm}{\centering\hpfont\textls[30]{\leftmark}}}{\reflectbox{\Stars}}
 \renewcommand*{\sectionmark}[1]{}
 
 
